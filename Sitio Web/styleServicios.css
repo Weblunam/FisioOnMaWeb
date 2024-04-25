@@ -1,0 +1,581 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-color: #f1f1f1;
+    scrollbar-color: #007876;
+}
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: #007876;
+}
+
+/*=============== Nav Bar =================*/
+#nav1{
+  height: 6rem;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, .2);
+  box-shadow: 0 3px 20px rgba(0, 0, 0, .25);
+  display: flex;
+  position: fixed;
+  z-index: 10;
+}
+
+/*Styling logo*/
+.logo{
+  padding:1vh 1vw;
+  text-align: center;
+}
+.logo img {
+  height: 5rem;
+  width: 5rem;
+}
+
+/*Styling Links*/
+.nav-links{
+  display: flex;
+  list-style: none; 
+  width: 88vw;
+  padding: 0 0.7vw;
+  justify-content: space-evenly;
+  align-items: center;
+  text-transform: uppercase;
+}
+.nav-links li a{
+  color: #f1f1f1;
+  text-decoration: none;
+  margin: 0 0.7vw;
+}
+.nav-links li a:hover {
+  color: #007876;
+}
+.nav-links li {
+  position: relative;
+}
+.nav-links li a::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0%;
+  background-color: #007876;
+  position: absolute;
+  transition: all ease-in-out 250ms;
+  margin: 0 0 0 10%;
+}
+.nav-links li a:hover::before{
+  width: 80%;
+}
+
+/*Styling Buttons*/
+.login-button{
+  background-color: transparent;
+  border: 1.5px solid #f2f5f7;
+  border-radius: 2em;
+  padding: 0.6rem 0.8rem;
+  margin-left: 2vw;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #f1f1f1;
+}
+.login-button:hover {
+  color: #007876;
+  background-color: #f2f5f7;
+  border:1.5px solid #f2f5f7;
+  transition: all ease-in-out 350ms;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div{
+  width: 30px;
+  height:3px;
+  background: #f2f5f7;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.hamburger{
+  display: none;
+}
+
+/*============= BANNER ================*/
+.banner{
+  position: relative;
+  background: url("Images/fondoChafa.png");
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 250px 0 200px;
+}
+.banner h2{
+  margin: 0;
+  padding: 0;
+  font-size: 3.8em;
+  color: #f1f1f1;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+.banner p{
+  margin: 1em 0 0;
+  padding: 0;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #f1f1f1;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+.btnD1{
+  display: inline-block;
+  margin: 1em 0 0;
+  background: #f1f1f1;
+  color: #131418;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  border: none;
+  font-weight: 800;
+}
+.btnD1:hover{
+  background: #131313;
+  color: #007876;
+  transition: all ease-in-out 350ms;
+}
+
+
+/*=============== A C E R C A   D E ==================*/
+.section-abt{
+  width: 100%;
+}
+.section-abt .container-abt{
+  width: 80%;
+  display: block;
+  margin: 0px auto;
+  padding: 50px;
+}
+.container-abt .titulo-abt{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+
+}
+.container-abt .titulo-abt h1{
+  text-transform: uppercase;
+  font-size: 45px;
+  color: #007876;
+  font-family: 'Bebas Neue', cursive;
+}
+.container-abt .titulo-abt h1::after{
+  content: "";
+  height: 5px;
+  width: 100px;
+  background-color: #6d6f6e;
+  border-radius: 25px;
+  display: block;
+  margin: auto;
+}
+.contenido-abt{
+  float: right;
+  width: 55%;
+}
+.contenido-abt .articulo-abt h3{
+  color: #222;
+  font-size: 17px;
+}
+.contenido-abt .articulo-abt p{
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #131313;
+  text-align: justify;
+}
+.contenido-abt .articulo-abt .bton-abt{
+  margin-top: 50px;
+}
+.contenido-abt .articulo-abt .bton-abt a{
+  text-decoration: none;
+  padding: 8px 25px;
+  background-color: #007876;
+  color: #f1f1f1;
+  border-radius: 40px;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+}
+.contenido-abt .articulo-abt .bton-abt a:hover{
+  color: #f1f1f1;
+  background-color: #0dadab;
+  transition: 1s ease;
+}
+.imag-abt{
+  float: left;
+  width: 40%;
+}
+.imag-abt img{
+  width: 100%;
+  height: auto;
+}
+.container-abt .social-abt{
+  width: 100%;
+  clear: both;
+  margin-top: 50px;
+  text-align: center;
+  display: inline-block;
+}
+.container-abt .social-abt i{
+  color: #f1f1f1;
+  font-size: 22px;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  line-height: 45px;
+  text-align: center;
+  background-color: #007876;
+  margin: 0px 5px;
+}
+.container-abt .social-abt i:hover{
+  color: #f1f1f1;
+  background-color: #0dadab;
+  transition: 1s ease;
+  transform: rotate(360deg);
+}
+/*=========== RESPONSIVE ACERCA DE NOSOTROS=============*/
+
+@media  screen and (max-width: 915px){
+  .section-abt .container-abt{
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
+  .contenido-abt{
+    float: none;
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+  .imag-abt{
+    float: none;
+    width: 100%;
+    margin-top: 50px;
+  }
+  .imag-abt img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .container-abt .titulo-abt h1{
+    text-align: center;
+    font-size: 30px;
+  }
+  .container-abt .articulo-abt .bton-abt{
+    text-align: center;
+  }
+  .container-abt .articulo-abt .bton-abt a{
+    padding: 6px 15px;
+    font-size: 16px;
+  }
+  .container-abt .social-abt i{
+    font-size: 19px;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+  }
+}
+
+
+/*=============== BANNER Deportiva  =================*/
+.banner-one{
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 148, 141, 0.6)), to(rgba(2, 172, 172, 0.5))), url('Images/BannerDeportiva-01.png') top/cover no-repeat;
+  background: -o-linear-gradient(rgba(0, 148, 141, 0.6), rgba(2, 172, 172, 0.5)), url('Images/BannerDeportiva-01.png') top/cover no-repeat;
+  background: linear-gradient(rgba(0, 148, 141, 0.6), rgba(2, 172, 172, 0.5)), url('Images/BannerDeportiva-01.png') top/cover no-repeat;
+  height: 480px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.banner-one .lead{
+  font-size: 2.8rem;
+  font-weight: 500;
+  max-width: 600px;
+}
+.banner-one .text-sm{
+  font-weight: 500;
+}
+.banner-one .text-sm a{
+    text-decoration: none;
+  display: inline-block;
+  margin: 1em 0 0;
+  background: #f1f1f1;
+  color: #131418;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  border: none;
+  font-weight: 800;
+}
+.banner-one .text-sm a:hover{
+    color: #f1f1f1;
+    background-color: #6d6f6e;
+    transition: 1s ease;
+}
+
+/*=============== BANNER Nuerologico  =================*/
+.banner-two{
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 148, 141, 0.6)), to(rgba(2, 172, 172, 0.5))), url('Images/bannerNeurologico.png') top/cover no-repeat;
+    background: -o-linear-gradient(rgba(0, 148, 141, 0.6), rgba(2, 172, 172, 0.5)), url('Images/bannerNeurologico.png') top/cover no-repeat;
+    background: linear-gradient(rgba(0, 148, 141, 0.6), rgba(2, 172, 172, 0.5)), url('Images/bannerNeurologico.png') top/cover no-repeat;
+    height: 480px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .banner-two .lead{
+    font-size: 2.8rem;
+    font-weight: 500;
+    max-width: 600px;
+  }
+  .banner-two .text-sm{
+    font-weight: 500;
+  }
+  .banner-two .text-sm a{
+      text-decoration: none;
+    display: inline-block;
+    margin: 1em 0 0;
+    background: #f1f1f1;
+    color: #131418;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    border: none;
+    font-weight: 800;
+  }
+  .banner-two .text-sm a:hover{
+      color: #f1f1f1;
+      background-color: #6d6f6e;
+      transition: 1s ease;
+  }
+
+/*=============== BANNER TRAUMATOLOGICO  =================*/
+.banner-three{
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 148, 141, 0.6)), to(rgba(2, 172, 172, 0.5))), url('Images/bannerTrauma-01.png') top/cover no-repeat;
+    background: -o-linear-gradient(rgba(0, 148, 141, 0.6), rgba(2, 172, 172, 0.5)), url('Images/bannerTrauma-01.png') top/cover no-repeat;
+    background: linear-gradient(rgba(0, 148, 141, 0.6), rgba(2, 172, 172, 0.5)), url('Images/bannerTrauma-01.png') top/cover no-repeat;
+    height: 480px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .banner-three .lead{
+    font-size: 2.8rem;
+    font-weight: 500;
+    max-width: 600px;
+  }
+  .banner-three .text-sm{
+    font-weight: 500;
+  }
+  .banner-three .text-sm a{
+      text-decoration: none;
+    display: inline-block;
+    margin: 1em 0 0;
+    background: #f1f1f1;
+    color: #131418;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    border: none;
+    font-weight: 800;
+  }
+  .banner-three .text-sm a:hover{
+      color: #f1f1f1;
+      background-color: #6d6f6e;
+      transition: 1s ease;
+  }
+
+/*=============== BANNER REUMATOLOGICO  =================*/
+.banner-four{
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 148, 141, 0.6)), to(rgba(2, 172, 172, 0.5))), url('Images/BannerReumatologis.png') top/cover no-repeat;
+    background: -o-linear-gradient(rgba(0, 148, 141, 0.6), rgba(2, 172, 172, 0.5)), url('Images/BannerReumatologis.png') top/cover no-repeat;
+    background: linear-gradient(rgba(0, 148, 141, 0.6), rgba(2, 172, 172, 0.5)), url('Images/BannerReumatologis.png') top/cover no-repeat;
+    height: 480px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .banner-four .lead{
+    font-size: 2.8rem;
+    font-weight: 500;
+    max-width: 600px;
+  }
+  .banner-four .text-sm{
+    font-weight: 500;
+  }
+  .banner-four .text-sm a{
+      text-decoration: none;
+    display: inline-block;
+    margin: 1em 0 0;
+    background: #f1f1f1;
+    color: #131418;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    border: none;
+    font-weight: 800;
+  }
+  .banner-four .text-sm a:hover{
+      color: #f1f1f1;
+      background-color: #6d6f6e;
+      transition: 1s ease;
+  }
+
+/*=============== Responsive NAV BAR =================*/
+
+@media screen and (max-width: 910px){
+  nav{
+      position: fixed;
+      z-index: 3;
+  }
+  .nav-links li a{
+    color: #f1f1f1;
+  }
+  .hamburger{
+      display:block;
+      position: absolute;
+      cursor: pointer;
+      right: 5%;
+      top: 50%;
+      transform: translate(-5%, -50%);
+      z-index: 2;
+      transition: all 0.7s ease;
+  }
+  .nav-links{
+      position: fixed;
+      background: #131418;
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      clip-path: circle(50px at 90% -20%);
+      -webkit-clip-path: circle(50px at 90% -10%);
+      transition: all 1s ease-out;
+      pointer-events: none;
+  }
+  .nav-links.open{
+      clip-path: circle(1000px at 90% -10%);
+      -webkit-clip-path: circle(1000px at 90% -10%);
+      pointer-events: all;
+  }
+  .nav-links li{
+      opacity: 0;
+  }
+  .nav-links li:nth-child(1){
+      transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2){
+      transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3){
+      transition: all 0.5s ease 0.6s;
+  }
+  .nav-links li:nth-child(4){
+      transition: all 0.5s ease 0.7s;
+  }
+  .nav-links li:nth-child(5){
+      transition: all 0.5s ease 0.8s;
+  }
+  .nav-links li:nth-child(6){
+      transition: all 0.5s ease 0.9s;
+      margin: 0;
+  }
+  .nav-links li:nth-child(7){
+      transition: all 0.5s ease 1s;
+      margin: 0;
+  }
+  li.fade{
+      opacity: 1;
+  }
+}
+/*Animating Hamburger Icon on Click*/
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+  transition: all 0.7s ease;
+  width:0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px,-6px);
+}
+
+
+@media (max-width: 915px) {
+body.disabled{
+  overflow: hidden;
+}
+.icon{
+  display: block;
+}
+.icon.hide{
+  display: none;
+}
+.navbar .menu-list{
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  max-width: 400px;
+  left: -100%;
+  top: 0px;
+  display: block;
+  padding: 40px 0;
+  text-align: center;
+  background: #222;
+  transition: all 0.3s ease;
+}
+.navbar.show .menu-list{
+  left: 0%;
+}
+.navbar .menu-list li{
+  margin-top: 45px;
+}
+.navbar .menu-list li a{
+  font-size: 23px;
+  margin-left: -100%;
+  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.navbar.show .menu-list li a{
+  margin-left: 0px;
+}
+}
+@media (max-width: 380px) {
+.navbar .logo a{
+  font-size: 27px;
+}
+}
