@@ -14,7 +14,39 @@ hamburger.addEventListener('click', ()=>{
     hamburger.classList.toggle("toggle");
 });
 
- /*========= info servicios ==========*/
+ /*========= LOGIN ==========*/
+ document.querySelector("#show_login").addEventListener("click", function(){
+  document.querySelector(".popup").classList.add("active");
+});
+
+document.querySelector(".popup .close_btn").addEventListener("click", function(){
+  document.querySelector(".popup").classList.remove("active");
+});
+
+var formulario = document.getElementsByName("form_login")[0];
+
+function validarEmail(e){
+  if(formulario.email.value == "" || formulario.email.value == 0){
+      alert("Completa el campo email")
+      e.preventDefault();
+  }
+}
+
+function validarPassword(e){
+  if(formulario.password.value == "" || formulario.password.value == 0){
+      alert("Completa el campo password")
+      e.preventDefault();
+  }
+}
+
+function validar(e)
+        {
+            validarEmail(e);
+            validarPassword(e)
+        }
+
+        formulario.addEventListener("submit",validar);
+
 
 
 /*========== SCROLL REAVEAL =============*/
